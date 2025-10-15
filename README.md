@@ -71,6 +71,8 @@ Oct 14 19:04:48 zenlab pif_rte[2452]: Server listening on 0.0.0.0:50051
 ## 3. Running Programs
 Once the environment is ready, use these steps to run your P4 programs
 ```
+# Go to directory containing the P4 program
+
 # Compile P4 program to generate firmware executable (nffw)
 sudo /opt/netronome/p4/bin/nfp4build -o outputfile.nffw -p out_dir -4 basic-forward.p4 -l lithium --nfp4c_I /opt/netronome/p4/include/16/p4include/ --nfp4c_p4_version 16
 
