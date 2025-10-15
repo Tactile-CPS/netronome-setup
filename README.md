@@ -78,7 +78,7 @@ sudo /opt/netronome/p4/bin/nfp4build -o outputfile.nffw -p out_dir -4 basic-forw
 sudo /opt/netronome/p4/bin/rtecli design-load -f outputfile.nffw -p out_dir/pif_design.json
 
 # Upload Match-Action Table (MAT) rules
-./basic-forward-p4-rules.sh
+sudo ./basic-forward-p4-rules.sh
 
 # Check status by reading nfp-generated logs(optional)
 tail -f /var/log/nfp-sdk6-rte.log
