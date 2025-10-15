@@ -3,7 +3,7 @@
 This guide provides a step-by-step procedure to set up the Netronome Agilio SmartNIC on an Ubuntu host.
 
 ## Prerequisites
-- Hardware:
+- Hardware
 	- Netronome Agilio CX 2x10GbE SmartNIC
 	- Host system with PCIe slot
 	- VT-x Virtualization support on Motherboard and CPU
