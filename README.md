@@ -55,17 +55,17 @@ sudo systemctl status nfp-sdk6-rte.service
 ```
 ```
 # Execution success:
+Active: active (running)
+Oct 14 19:04:48 zenlab pif_rte[2452]: Starting gRPC server.
+Oct 14 19:04:48 zenlab pif_rte[2452]: Server listening on 0.0.0.0:50051
+
+# Execution failed:
 Active: failed (Result: core-dump)
 Oct 14 19:03:56 zenlab pif_rte[2321]: Starting gRPC server.
 Oct 14 19:03:56 zenlab pif_rte[2321]: [E] RTE: 2025-10-14 19:03:56.834 - nfp_pif.c:150: Invalid handl
 Oct 14 19:03:56 zenlab pif_rte[2321]: terminate called without an active exception
 Oct 14 19:03:56 zenlab systemd[1]: nfp-sdk6-rte.service: Main process exited, code=dumped, status=6/A
 Oct 14 19:03:56 zenlab systemd[1]: nfp-sdk6-rte.service: Failed with result 'core-dump'.
-
-# Execution failed:
-Active: active (running)
-Oct 14 19:04:48 zenlab pif_rte[2452]: Starting gRPC server.
-Oct 14 19:04:48 zenlab pif_rte[2452]: Server listening on 0.0.0.0:50051
 ```
 
 ## 3. Running Programs
@@ -82,7 +82,7 @@ sudo /opt/netronome/p4/bin/rtecli design-load -f outputfile.nffw -p out_dir/pif_
 # Upload Match-Action Table (MAT) rules
 sudo ./basic-forward-p4-rules.sh
 
-# Check status by reading nfp-generated logs(optional)
+# (Optional) Check status by reading nfp-generated logs
 tail -f /var/log/nfp-sdk6-rte.log
 ```
 
