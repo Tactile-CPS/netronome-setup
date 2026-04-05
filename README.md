@@ -31,7 +31,7 @@ These steps must be done after every system reboot to prepare the environment.
 - Reload nfp module with P4 support
 ```
 sudo modprobe -rv nfp
-sudo modprobe -v nfp nfp_dev_cpp=1  # nfp_pf_netdev=0
+sudo modprobe -v nfp nfp_dev_cpp=1 nfp_pf_netdev=0
 
 # Check status
 sudo /opt/netronome/bin/nfp-nffw status
