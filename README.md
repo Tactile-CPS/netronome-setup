@@ -9,9 +9,9 @@ This guide provides a step-by-step procedure to set up the Netronome Agilio Smar
 	- VT-x Virtualization support on Motherboard and CPU
 
 - Software
- - OS: Ubuntu 18.04
- - Netronome packages obtained from official Netronome website (you must have an account there)
- - Netronome out-of-tree driver from [github](https://github.com/Netronome/nfp-drv-kmods)
+    - OS: Ubuntu 18.04
+    - Netronome packages obtained from official Netronome website (you must have an account there)
+    - Netronome out-of-tree (oot) driver from [github](https://github.com/Netronome/nfp-drv-kmods)
 
 ## 1. New System Initialization
 - Configure OS
