@@ -8,23 +8,27 @@ This guide provides a step-by-step procedure to set up the Netronome Agilio Smar
 	- Host system with PCIe slot
 	- VT-x Virtualization support on Motherboard and CPU
 
+- Software
+ - OS: Ubuntu 18.04
+ - Netronome packages obtained from official Netronome website (you must have an account there)
+ - Netronome out-of-tree driver from [github](https://github.com/Netronome/nfp-drv-kmods)
+
 ## 1. New System Initialization
-- OS configuration
-	- Install Ubuntu 18.04 OS
-		- The OS comes with Linux kernel 5.4 by default
-	- Install kernel 4.15
+- Configure OS
+	- Ubuntu 18.04 OS comes with Linux kernel v5.4 by default
+	- Install kernel v4.15
+    - Reboot into kernel v4.15
 	- Enable Virtualization support in the kernel
 		```
 		# Edit /etc/default/grub to have the following line
 		GRUB_CMDLINE_LINUX_DEFAULT="quiet splash intel_iommu=on iommu=pt"
 		```
 	- Reboot the system and enable VT-x virtualization in Motherboard settings
-	- Reboot to kernel 4.15
+	- Reboot to kernel v4.15
+
+- Install NFP oot driver
+    - Replaces pre-loaded nfp driver from kernel
 - Install Netronome packages
-	- Get packages from official Netronome website
-	- Install the packages
-	- Install NFP oot driver
-		- Replaces pre-loaded nfp driver from kernel
 
 ## 2. Environment Setup after every boot
 These steps must be done after every system reboot to prepare the environment.
@@ -69,7 +73,7 @@ Oct 14 19:03:56 zenlab systemd[1]: nfp-sdk6-rte.service: Failed with result 'cor
 ```
 
 ## 3. Running Programs
-Once the environment is ready, use these steps to run your P4 programs
+Once the environment is ready, use these steps to run your P4 program on the SmartNIC
 ```
 # Go to directory containing the P4 program
 
